@@ -7,7 +7,91 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-      /* Custom inline styles for responsive table and strain layouts */
+      /* Custom inline styles for layout and responsiveness */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f6fff6;
+        color: #333;
+      }
+      #wrapper {
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+      }
+      header, footer {
+        background-color: #a8d5ba; /* medium light green */
+        color: #fff;
+        padding: 20px 0;
+      }
+      header .inner, footer .inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+      header .logo, footer .logo {
+        display: flex;
+        align-items: center;
+      }
+      header .logo img {
+        max-height: 50px;
+        margin-right: 10px;
+      }
+      header nav ul, #menu ul, footer ul.icons {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      header nav ul li, #menu ul li, footer ul.icons li {
+        margin: 0 10px;
+      }
+      header nav ul li a, #menu ul li a, footer ul.icons li a {
+        color: inherit;
+        text-decoration: none;
+      }
+      /* Menu sidebar */
+      #menu {
+        background: #e0f2e9; /* light green */
+        padding: 15px 20px;
+      }
+      #menu h2 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      #menu ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      #menu ul li {
+        margin: 5px 0;
+      }
+      /* Main Content */
+      #main {
+        padding: 20px;
+        background-color: #fff;
+      }
+      .inner section {
+        padding: 30px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+      }
+      /* Alternate section background for visual interest */
+      .inner section:nth-of-type(odd) {
+        background-color: #e8f5e9; /* light green */
+      }
+      .inner section:nth-of-type(even) {
+        background-color: #ffffff;
+      }
+      /* Centered headings */
+      h1, h2, h3 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      /* Responsive table and strain layouts */
       .side-by-side {
         display: flex;
         flex-wrap: wrap;
@@ -17,14 +101,41 @@
         flex: 1;
         min-width: 300px;
       }
+      .table-wrapper table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: auto;
+      }
+      .table-wrapper table, .table-wrapper th, .table-wrapper td {
+        border: 1px solid #ccc;
+      }
+      .table-wrapper th, .table-wrapper td {
+        padding: 10px;
+        text-align: center;
+      }
       .strain-container {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+        justify-content: center;
       }
       .strain-column {
         flex: 1;
         min-width: 250px;
+      }
+      /* Footer adjustments */
+      #footer form .fields {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      #footer form .field {
+        flex: 1;
+        min-width: 200px;
+      }
+      #footer ul.copyright {
+        text-align: center;
+        padding-top: 20px;
       }
     </style>
   </head>
@@ -47,7 +158,7 @@
         </div>
       </header>
 
-      <!-- Menu -->
+      <!-- Menu Navigation -->
       <nav id="menu">
         <h2>Menu</h2>
         <ul>
@@ -57,7 +168,7 @@
         </ul>
       </nav>
 
-      <!-- Main -->
+      <!-- Main Content -->
       <div id="main">
         <div class="inner">
           <section>
@@ -65,7 +176,7 @@
             <p>Check out our available products and pricing below.</p>
           </section>
           
-          <!-- Pricing Tables -->
+          <!-- Pricing Tables Section -->
           <section>
             <div class="side-by-side">
               <!-- Flower Prices Table -->
@@ -208,7 +319,6 @@
           <!-- Mr. Melty Section -->
           <section>
             <h2>Mr. Melty</h2>
-            <!-- Placeholder Logo -->
             <div style="text-align: center; margin-bottom: 20px;">
               <img src="https://via.placeholder.com/200x100?text=Mr.+Melty+Logo" alt="Mr. Melty Logo" />
             </div>
