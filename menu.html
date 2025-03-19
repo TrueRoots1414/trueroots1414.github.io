@@ -4,25 +4,34 @@
     <title>Wholesale Cannabis Menu</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- Google Font for a modern look -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-      /* Custom inline styles for layout and responsiveness */
+      /* Global styles */
       body {
-        font-family: Arial, sans-serif;
+        font-family: 'Montserrat', Arial, sans-serif;
         line-height: 1.6;
         margin: 0;
         padding: 0;
         background-color: #f6fff6;
         color: #333;
       }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      /* Wrapper */
       #wrapper {
         max-width: 1200px;
         margin: auto;
         overflow: hidden;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
       }
+      /* Header & Footer */
       header, footer {
-        background-color: #a8d5ba; /* medium light green */
+        background-color: #78c2ad; /* medium light green */
         color: #fff;
         padding: 20px 0;
       }
@@ -50,24 +59,36 @@
         margin: 0 10px;
       }
       header nav ul li a, #menu ul li a, footer ul.icons li a {
-        color: inherit;
-        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
       }
-      /* Menu sidebar */
+      /* Menu Navigation */
       #menu {
-        background: #e0f2e9; /* light green */
+        background: #d0f0de; /* pale light green */
         padding: 15px 20px;
       }
       #menu h2 {
         text-align: center;
         margin-bottom: 10px;
+        font-size: 1.6em;
+        letter-spacing: 1px;
       }
       #menu ul {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
       }
       #menu ul li {
-        margin: 5px 0;
+        margin: 5px 15px;
+      }
+      #menu ul li a {
+        font-weight: 600;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: background 0.3s;
+      }
+      #menu ul li a:hover {
+        background: rgba(120, 194, 173, 0.8);
       }
       /* Main Content */
       #main {
@@ -79,40 +100,69 @@
         margin-bottom: 20px;
         border-radius: 8px;
       }
-      /* Alternate section background for visual interest */
+      /* Section Backgrounds for visual separation */
       .inner section:nth-of-type(odd) {
-        background-color: #e8f5e9; /* light green */
+        background-color: #e8f5e9;
       }
       .inner section:nth-of-type(even) {
         background-color: #ffffff;
       }
-      /* Centered headings */
+      /* Headings */
       h1, h2, h3 {
         text-align: center;
         margin-bottom: 20px;
+        color: #2a4d3b;
       }
-      /* Responsive table and strain layouts */
+      h1 {
+        font-size: 2.4em;
+      }
+      h2 {
+        font-size: 2em;
+        border-bottom: 2px solid #78c2ad;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+      h3 {
+        font-size: 1.6em;
+      }
+      p {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      /* Pricing Tables */
       .side-by-side {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+        justify-content: center;
       }
       .side-by-side > .table-container {
         flex: 1;
         min-width: 300px;
+      }
+      .table-wrapper {
+        overflow-x: auto;
       }
       .table-wrapper table {
         width: 100%;
         border-collapse: collapse;
         margin: auto;
       }
-      .table-wrapper table, .table-wrapper th, .table-wrapper td {
-        border: 1px solid #ccc;
-      }
       .table-wrapper th, .table-wrapper td {
-        padding: 10px;
+        padding: 15px;
         text-align: center;
       }
+      .table-wrapper th {
+        background-color: #78c2ad;
+        color: #fff;
+      }
+      .table-wrapper td {
+        background-color: #f0fff0;
+      }
+      .table-wrapper tr:nth-child(even) td {
+        background-color: #e8f5e9;
+      }
+      /* Strain Lists */
       .strain-container {
         display: flex;
         flex-wrap: wrap;
@@ -122,20 +172,94 @@
       .strain-column {
         flex: 1;
         min-width: 250px;
+        background: #f0fff6;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.05);
       }
-      /* Footer adjustments */
+      .strain-column h3 {
+        margin-top: 0;
+        color: #2a4d3b;
+        border-bottom: 1px solid #78c2ad;
+        padding-bottom: 10px;
+      }
+      .strain-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .strain-column li {
+        padding: 8px;
+        border-bottom: 1px dashed #ccc;
+      }
+      .strain-column li:last-child {
+        border-bottom: none;
+      }
+      /* Mr. Melty Section Enhancements */
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .row > div {
+        flex: 1;
+        min-width: 250px;
+        background: #f7fff7;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      /* Footer Form */
       #footer form .fields {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
+        justify-content: center;
       }
       #footer form .field {
         flex: 1;
         min-width: 200px;
       }
+      #footer form input, #footer form textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+      }
+      #footer form textarea {
+        resize: vertical;
+      }
+      #footer form .actions {
+        text-align: center;
+        margin-top: 15px;
+      }
+      #footer form .primary {
+        background: #78c2ad;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.3s;
+      }
+      #footer form .primary:hover {
+        background: #5aa094;
+      }
+      /* Footer Icons */
+      footer ul.icons {
+        justify-content: center;
+      }
+      footer ul.icons li {
+        margin: 0 10px;
+      }
+      footer ul.icons li a {
+        font-size: 1.4em;
+      }
+      /* Copyright */
       #footer ul.copyright {
         text-align: center;
         padding-top: 20px;
+        font-size: 0.9em;
       }
     </style>
   </head>
@@ -171,9 +295,10 @@
       <!-- Main Content -->
       <div id="main">
         <div class="inner">
+          <!-- Introduction Section -->
           <section>
             <h1>Wholesale Cannabis Menu</h1>
-            <p>Check out our available products and pricing below.</p>
+            <p>Browse our products, prices, and strains below. Fast, clear, and ready for your business needs.</p>
           </section>
           
           <!-- Pricing Tables Section -->
@@ -323,13 +448,13 @@
               <img src="https://via.placeholder.com/200x100?text=Mr.+Melty+Logo" alt="Mr. Melty Logo" />
             </div>
             <div class="row">
-              <div class="col-6 col-12-medium">
+              <div>
                 <h3>Pre-Rolls</h3>
                 <p><strong>Mr. Melty 1g Premium Pre-Rolls</strong></p>
                 <p>Price: $2.50 per pre-roll<br /><small>($2 bulk)</small></p>
                 <p>Also available: 4-Pack Pre-Roll Tins at $10 per pack</p>
               </div>
-              <div class="col-6 col-12-medium">
+              <div>
                 <h3>Flower Jars</h3>
                 <p><strong>3.5g Flower Jars</strong></p>
                 <p>Price: $10</p>
@@ -377,9 +502,9 @@
                   <textarea name="message" id="message" placeholder="Message"></textarea>
                 </div>
               </div>
-              <ul class="actions">
-                <li><input type="submit" value="Send" class="primary" /></li>
-              </ul>
+              <div class="actions" style="text-align:center;">
+                <input type="submit" value="Send" class="primary" />
+              </div>
             </form>
           </section>
           <section>
