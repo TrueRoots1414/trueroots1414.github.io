@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        body { font-size: 0.9em; }
+        .table-wrapper { display: flex; flex-wrap: wrap; justify-content: space-between; }
+        .table-wrapper table { width: 48%; min-width: 300px; }
+        .strain-grid { display: flex; flex-wrap: wrap; justify-content: space-between; }
+        .strain-grid div { width: 32%; min-width: 300px; }
+        h2, h3 { border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+        section { margin-bottom: 30px; }
+    </style>
 </head>
 <body class="is-preload">
     <div id="wrapper">
@@ -32,12 +41,10 @@
             <div class="inner">
                 <h1>Menu</h1>
                 <section>
-                    <h2>Flower Prices</h2>
+                    <h2>Pricing</h2>
                     <div class="table-wrapper">
                         <table>
-                            <thead>
-                                <tr><th>Type</th><th>Price</th></tr>
-                            </thead>
+                            <thead><tr><th>Flower</th><th>Price</th></tr></thead>
                             <tbody>
                                 <tr><td>Flower</td><td>$700</td></tr>
                                 <tr><td>Flower - 10 lbs. or more</td><td>$600</td></tr>
@@ -48,15 +55,8 @@
                                 <tr><td>Trim</td><td>$100</td></tr>
                             </tbody>
                         </table>
-                    </div>
-                </section>
-                <section>
-                    <h2>Pre-Roll Prices</h2>
-                    <div class="table-wrapper">
                         <table>
-                            <thead>
-                                <tr><th>Product</th><th>Price</th></tr>
-                            </thead>
+                            <thead><tr><th>Pre-Rolls</th><th>Price</th></tr></thead>
                             <tbody>
                                 <tr><td>Single Pre-Roll (1g)</td><td>$2/pre-roll ($1.50 bulk)</td></tr>
                                 <tr><td>Kiefy Cones (1g)</td><td>$4/Pre-Roll</td></tr>
@@ -69,68 +69,56 @@
                     </div>
                 </section>
                 <section>
-                    <h2>Flower & Pre-Roll Strains</h2>
-                    <h3>Sativa</h3>
-                    <ul>
-                        <li>Blueberry Pound Cake – 20.4-26.8%</li>
-                        <li>Chemlato – 23.9%</li>
-                        <li>Forbidden Jack – 17.7-19.8%</li>
-                        <li>Galactic Glue – 21.5%</li>
-                        <li>Limonade – 18.8-27.1%</li>
-                        <li>Papaya Gushers – 22.5%</li>
-                        <li>Sour Nerdz – 22.1-23.9%</li>
-                        <li>Walter White Widow – 19.3-21.8%</li>
-                    </ul>
-                    <h3>Hybrid</h3>
-                    <ul>
-                        <li>Dark Web – 21.4-22.4%</li>
-                        <li>Gary Payton – 20.4%</li>
-                        <li>Grape Gas – 20.0-21.4%</li>
-                        <li>Horchata – 22.1%</li>
-                        <li>Lemon Cherry Trufflez – 22.7-24.5%</li>
-                        <li>Moon Mintz – 23.5%</li>
-                        <li>Peach Cobbler – 22.1%</li>
-                        <li>Super Runtz – 22.1-24.3%</li>
-                        <li>Tropicana Kush – 18.1-19.8%</li>
-                        <li>Zoap – 21.4%</li>
-                    </ul>
-                    <h3>Indica</h3>
-                    <ul>
-                        <li>Chile Verde – 21.0-24.6%</li>
-                        <li>Cosmic Cookies – 19.9-24.1%</li>
-                        <li>Mule Fuel – 20.4-23.8%</li>
-                        <li>Pistachio Gelato – 23.8-24.3%</li>
-                        <li>Sandia OG – 20.7-21.7%</li>
-                        <li>Snozzberries – 20.7-27.7%</li>
-                    </ul>
+                    <h2>Strains</h2>
+                    <div class="strain-grid">
+                        <div>
+                            <h3>Sativa</h3>
+                            <ul>
+                                <li>Blueberry Pound Cake – 20.4-26.8%</li>
+                                <li>Chemlato – 23.9%</li>
+                                <li>Forbidden Jack – 17.7-19.8%</li>
+                                <li>Galactic Glue – 21.5%</li>
+                                <li>Limonade – 18.8-27.1%</li>
+                                <li>Papaya Gushers – 22.5%</li>
+                                <li>Sour Nerdz – 22.1-23.9%</li>
+                                <li>Walter White Widow – 19.3-21.8%</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Hybrid</h3>
+                            <ul>
+                                <li>Dark Web – 21.4-22.4%</li>
+                                <li>Gary Payton – 20.4%</li>
+                                <li>Grape Gas – 20.0-21.4%</li>
+                                <li>Horchata – 22.1%</li>
+                                <li>Lemon Cherry Trufflez – 22.7-24.5%</li>
+                                <li>Moon Mintz – 23.5%</li>
+                                <li>Peach Cobbler – 22.1%</li>
+                                <li>Super Runtz – 22.1-24.3%</li>
+                                <li>Tropicana Kush – 18.1-19.8%</li>
+                                <li>Zoap – 21.4%</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Indica</h3>
+                            <ul>
+                                <li>Chile Verde – 21.0-24.6%</li>
+                                <li>Cosmic Cookies – 19.9-24.1%</li>
+                                <li>Mule Fuel – 20.4-23.8%</li>
+                                <li>Pistachio Gelato – 23.8-24.3%</li>
+                                <li>Sandia OG – 20.7-21.7%</li>
+                                <li>Snozzberries – 20.7-27.7%</li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
                 <section>
                     <h2>Mr. Melty</h2>
                     <p>Pre-Rolls: $2.50/pre-roll ($2.00 bulk)</p>
                     <p>3.5g Flower Jars: $15 ($10 bulk)</p>
-                    <ul>
-                        <li>Gelonade – Sativa – 26.8%</li>
-                        <li>Lemonati – Sativa – 25.8%</li>
-                        <li>Puro Loco – Hybrid – 23.5%</li>
-                        <li>Sunset Sherbert – Indica – 23.0%</li>
-                        <li>Zkittlez – Indica – 26.6%</li>
-                    </ul>
                 </section>
                 <section>
                     <h2>Bulk Extracts</h2>
-                    <p><strong>SAUCE</strong></p>
-                    <ul>
-                        <li>Galactic Glue – 56.14% – 1711g</li>
-                        <li>Limonade – 58.64% – 722g</li>
-                        <li>Miami Mango – 51.25% – 1045g</li>
-                    </ul>
-                    <p><strong>DIAMONDS</strong></p>
-                    <ul>
-                        <li>Galactic Glue – 82.12% – 1200g</li>
-                        <li>Limonade – 76.27% – 481g</li>
-                        <li>Miami Mango – 83.15% – 650g</li>
-                    </ul>
-                    <p><strong>Pricing:</strong></p>
                     <p>Sauce HTE | $10/gram</p>
                     <p>Diamonds | $6/gram (100g min.)</p>
                 </section>
