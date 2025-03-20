@@ -12,33 +12,74 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Reduce base font size */
+			/* Base text and boldness */
 			body {
-				font-size: 0.85em;
+				font-size: 0.9em;
+				font-family: Arial, sans-serif;
+				line-height: 1.6;
+				font-weight: 400;
+				margin: 0;
+				padding: 0;
 			}
-			/* Container for clear sections */
+			h1, h2, h3 {
+				font-weight: 700;
+				letter-spacing: 1px;
+				margin-top: 0;
+			}
+			/* Section container styling */
 			.section-container {
-				margin-bottom: 2em;
+				padding: 2em 1em;
+			}
+			/* Alternating background classes */
+			.dark-section {
+				background-color: #333;
+				color: #f2f2f2;
+			}
+			.light-section {
+				background-color: #f9f9f9;
+				color: #333;
+			}
+			/* Section title styling */
+			.section-title {
+				font-size: 2em;
+				text-align: center;
+				margin-bottom: 1em;
 			}
 			/* Flex container for side-by-side sections */
 			.flex-container {
 				display: flex;
 				flex-wrap: wrap;
 				gap: 2em;
+				justify-content: center;
 			}
 			.flex-container > section {
 				flex: 1;
 				min-width: 300px;
 			}
-			/* Smaller tables */
+			/* Table styling */
 			.table-wrapper table {
-				font-size: 0.85em;
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 0.9em;
 			}
-			/* Section headings styling */
-			.section-container h2 {
-				border-bottom: 2px solid #ccc;
-				padding-bottom: 0.3em;
-				margin-bottom: 1em;
+			.table-wrapper th,
+			.table-wrapper td {
+				padding: 0.5em;
+				border: 1px solid #ccc;
+				text-align: left;
+			}
+			.dark-section .table-wrapper th,
+			.dark-section .table-wrapper td {
+				border-color: #555;
+			}
+			/* Improve readability on table headers */
+			.table-wrapper th {
+				background-color: #e2e2e2;
+				font-weight: 700;
+			}
+			.dark-section .table-wrapper th {
+				background-color: #444;
+				color: #f2f2f2;
 			}
 		</style>
 	</head>
@@ -49,11 +90,10 @@
 			<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<!-- Logo -->
 					<a href="index.html" class="logo">
-						<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+						<span class="symbol"><img src="images/logo.svg" alt="" /></span>
+						<span class="title">Phantom</span>
 					</a>
-					<!-- Nav -->
 					<nav>
 						<ul>
 							<li><a href="#menu">Menu</a></li>
@@ -74,14 +114,14 @@
 				</ul>
 			</nav>
 
-			<!-- Main -->
+			<!-- Main Content -->
 			<div id="main">
 				<div class="inner">
-					<h1>Product Data</h1>
+					<h1 style="text-align:center; font-size:2.5em; margin-bottom:1em;">Product Data</h1>
 
-					<!-- Prices Section: Flower and Pre-Roll Pricing side by side -->
-					<div class="section-container">
-						<h2>Prices</h2>
+					<!-- Flower and Pre-Roll Prices (Dark Section) -->
+					<section class="section-container dark-section">
+						<div class="section-title">Flower and Pre-Roll Prices</div>
 						<div class="flex-container">
 							<!-- Flower Pricing -->
 							<section id="flower-pricing">
@@ -176,11 +216,11 @@
 								</div>
 							</section>
 						</div>
-					</div>
+					</section>
 
-					<!-- Strains Section: Sativa, Hybrid, and Indica side by side -->
-					<div class="section-container">
-						<h2>Strains</h2>
+					<!-- Flower and Pre-Roll Strains (Light Section) -->
+					<section class="section-container light-section">
+						<div class="section-title">Flower and Pre-Roll Strains</div>
 						<div class="flex-container">
 							<!-- Sativa -->
 							<section id="sativa">
@@ -329,11 +369,11 @@
 								</div>
 							</section>
 						</div>
-					</div>
+					</section>
 
-					<!-- Mr. Melty Section -->
-					<div class="section-container" id="mr-melty">
-						<h2>Mr. Melty</h2>
+					<!-- Mr. Melty (Dark Section) -->
+					<section class="section-container dark-section" id="mr-melty">
+						<div class="section-title">Mr. Melty</div>
 						<div class="flex-container">
 							<section>
 								<h3>Pre-Rolls</h3>
@@ -378,7 +418,6 @@
 								</div>
 							</section>
 						</div>
-						<!-- Mr. Melty Strains -->
 						<section>
 							<h3>Strains</h3>
 							<div class="table-wrapper">
@@ -420,11 +459,11 @@
 								</table>
 							</div>
 						</section>
-					</div>
+					</section>
 
-					<!-- Bulk Extracts Section -->
-					<div class="section-container" id="bulk-extracts">
-						<h2>Bulk Extracts</h2>
+					<!-- Bulk Extracts (Light Section) -->
+					<section class="section-container light-section" id="bulk-extracts">
+						<div class="section-title">Bulk Extracts</div>
 						<div class="flex-container">
 							<section>
 								<h3>Sauce</h3>
@@ -489,8 +528,8 @@
 								</div>
 							</section>
 						</div>
-						<p><strong>BULK BHO Pricing:</strong> Sauce HTE | $10/gram; Diamonds | $6/gram (100g min.)</p>
-					</div>
+						<p style="text-align:center; margin-top:1em;"><strong>BULK BHO Pricing:</strong> Sauce HTE | $10/gram; Diamonds | $6/gram (100g min.)</p>
+					</section>
 
 				</div>
 			</div>
