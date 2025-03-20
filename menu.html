@@ -1,538 +1,73 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Wholesale Cannabis Menu</title>
+<head>
+    <title>Menu - Phantom</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <!-- Google Font for a modern look -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-      /* Global styles */
-      body {
-        font-family: 'Montserrat', Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f6fff6;
-        color: #333;
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-      /* Wrapper */
-      #wrapper {
-        max-width: 1200px;
-        margin: auto;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      }
-      /* Header & Footer */
-      header, footer {
-        background-color: #78c2ad; /* medium light green */
-        color: #fff;
-        padding: 20px 0;
-      }
-      header .inner, footer .inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-      }
-      header .logo, footer .logo {
-        display: flex;
-        align-items: center;
-      }
-      header .logo img {
-        max-height: 50px;
-        margin-right: 10px;
-      }
-      header nav ul, #menu ul, footer ul.icons {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-      }
-      header nav ul li, #menu ul li, footer ul.icons li {
-        margin: 0 10px;
-      }
-      header nav ul li a, #menu ul li a, footer ul.icons li a {
-        color: #fff;
-        font-weight: 600;
-      }
-      /* Menu Navigation */
-      #menu {
-        background: #d0f0de; /* pale light green */
-        padding: 15px 20px;
-      }
-      #menu h2 {
-        text-align: center;
-        margin-bottom: 10px;
-        font-size: 1.6em;
-        letter-spacing: 1px;
-      }
-      #menu ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      #menu ul li {
-        margin: 5px 15px;
-      }
-      #menu ul li a {
-        font-weight: 600;
-        padding: 5px 10px;
-        border-radius: 4px;
-        transition: background 0.3s;
-      }
-      #menu ul li a:hover {
-        background: rgba(120, 194, 173, 0.8);
-      }
-      /* Main Content */
-      #main {
-        padding: 20px;
-        background-color: #fff;
-      }
-      .inner section {
-        padding: 30px;
-        margin-bottom: 20px;
-        border-radius: 8px;
-      }
-      /* Section Backgrounds for visual separation */
-      .inner section:nth-of-type(odd) {
-        background-color: #e8f5e9;
-      }
-      .inner section:nth-of-type(even) {
-        background-color: #ffffff;
-      }
-      /* Headings */
-      h1, h2, h3 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #2a4d3b;
-      }
-      h1 {
-        font-size: 2.4em;
-      }
-      h2 {
-        font-size: 2em;
-        border-bottom: 2px solid #78c2ad;
-        display: inline-block;
-        padding-bottom: 5px;
-      }
-      h3 {
-        font-size: 1.6em;
-      }
-      /* Specific rule for table headings */
-      .table-container h2 {
-        font-size: 1.6em; /* Adjust as desired */
-        justify-content: center;
-      }
-      p {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      /* Pricing Tables */
-      .side-by-side {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-      }
-      .side-by-side > .table-container {
-        flex: 1;
-        min-width: 300px;
-      }
-      .table-wrapper {
-        overflow-x: auto;
-      }
-      .table-wrapper table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: auto;
-      }
-      .table-wrapper th, .table-wrapper td {
-        padding: 15px;
-        text-align: center;
-      }
-      .table-wrapper th {
-        background-color: #78c2ad;
-        color: #fff;
-      }
-      .table-wrapper td {
-        background-color: #f0fff0;
-      }
-      .table-wrapper tr:nth-child(even) td {
-        background-color: #e8f5e9;
-      }
-      /* Strain Lists */
-      .strain-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-      }
-      .strain-column {
-        flex: 1;
-        min-width: 250px;
-        background: #f0fff6;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 0 5px rgba(0,0,0,0.05);
-      }
-      .strain-column h3 {
-        margin-top: 0;
-        color: #2a4d3b;
-        border-bottom: 1px solid #78c2ad;
-        padding-bottom: 10px;
-      }
-      .strain-column ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .strain-column li {
-        padding: 8px;
-        border-bottom: 1px dashed #ccc;
-      }
-      .strain-column li:last-child {
-        border-bottom: none;
-      }
-      /* Mr. Melty Section Enhancements */
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-      }
-      .row > div {
-        flex: 1;
-        min-width: 250px;
-        background: #f7fff7;
-        padding: 15px;
-        border-radius: 8px;
-      }
-      /* Footer Form */
-      #footer form .fields {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-      }
-      #footer form .field {
-        flex: 1;
-        min-width: 200px;
-      }
-      #footer form input, #footer form textarea {
-        width: 100%;
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-      }
-      #footer form textarea {
-        resize: vertical;
-      }
-      #footer form .actions {
-        text-align: center;
-        margin-top: 15px;
-      }
-      #footer form .primary {
-        background: #78c2ad;
-        border: none;
-        color: #fff;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 4px;
-        transition: background 0.3s;
-      }
-      #footer form .primary:hover {
-        background: #5aa094;
-      }
-      /* Footer Icons */
-      footer ul.icons {
-        justify-content: center;
-      }
-      footer ul.icons li {
-        margin: 0 10px;
-      }
-      footer ul.icons li a {
-        font-size: 1.4em;
-      }
-      /* Copyright */
-      #footer ul.copyright {
-        text-align: center;
-        padding-top: 20px;
-        font-size: 0.9em;
-      }
-    </style>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
+</head>
+<body>
     <div id="wrapper">
-
-      <!-- Header -->
-      <header id="header">
-        <div class="inner">
-          <a href="index.html" class="logo">
-            <span class="symbol"><img src="images/logo.svg" alt="Logo" /></span>
-            <span class="title">Your Brand</span>
-          </a>
-          <nav>
-            <ul>
-              <li><a href="#menu">Menu</a></li>
-            </ul>
-          </nav>
+        <header id="header">
+            <div class="inner">
+                <h1>Menu</h1>
+            </div>
+        </header>
+        <div id="main">
+            <div class="inner">
+                <section>
+                    <h2>Flower Prices</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Type</th><th>Price</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Flower</td><td>$700</td></tr>
+                            <tr><td>Flower - 10 lbs. or more</td><td>$600</td></tr>
+                            <tr><td>Flower - 20 lbs. or more</td><td>$500</td></tr>
+                            <tr><td>50/50 Regular Buds/Popcorn</td><td>$450</td></tr>
+                            <tr><td>Popcorn</td><td>$300</td></tr>
+                            <tr><td>Shake*</td><td>$200</td></tr>
+                            <tr><td>Trim*</td><td>$100</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h2>Pre-Roll Prices</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Product</th><th>Price</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Single Pre-Roll (1g)</td><td>$2/pre-roll ($1.50 bulk)</td></tr>
+                            <tr><td>Kiefy Cones (1g)</td><td>$4/Pre-Roll</td></tr>
+                            <tr><td>25 Pack (0.5g)</td><td>$25/pack ($19 bulk)</td></tr>
+                            <tr><td>2 Pack (1g)</td><td>$3.90/pack ($2.90 bulk)</td></tr>
+                            <tr><td>10 Pack (1g)</td><td>$18.50/pack ($13.50 bulk)</td></tr>
+                            <tr><td>20 Pack (1g)</td><td>$36/pack ($26 bulk)</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h2>Flower & Pre-Roll Strains</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Strain</th><th>Type</th><th>THC%</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Blueberry Pound Cake</td><td>Sativa</td><td>20.4-26.8%</td></tr>
+                            <tr><td>Chemlato</td><td>Hybrid</td><td>23.9%</td></tr>
+                            <tr><td>Forbidden Jack</td><td>Sativa</td><td>17.7-19.8%</td></tr>
+                            <tr><td>Galactic Glue</td><td>Hybrid</td><td>21.5%</td></tr>
+                            <tr><td>Limonade</td><td>Hybrid</td><td>18.8-27.1%</td></tr>
+                            <tr><td>Papaya Gushers</td><td>Indica</td><td>22.5%</td></tr>
+                            <tr><td>Sour Nerdz</td><td>Hybrid</td><td>22.1-23.9%</td></tr>
+                            <tr><td>Walter White Widow</td><td>Indica</td><td>19.3-21.8%</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
         </div>
-      </header>
-
-      <!-- Menu Navigation -->
-      <nav id="menu">
-        <h2>Menu</h2>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Product Menu</a></li>
-          <li><a href="elements.html">Elements</a></li>
-        </ul>
-      </nav>
-
-      <!-- Main Content -->
-      <div id="main">
-        <div class="inner">
-          <!-- Introduction Section -->
-          <section>
-            <h1>Wholesale Cannabis Menu</h1>
-            <p>Browse our products, prices, and strains below. Fast, clear, and ready for your business needs.</p>
-          </section>
-          
-          <!-- Pricing Tables Section -->
-          <section>
-            <div class="side-by-side">
-              <!-- Flower Prices Table -->
-              <div class="table-container">
-                <h2>Flower Prices</h2>
-                <div class="table-wrapper">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Item</th>
-                        <th>Price</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Flower</td>
-                        <td>$700</td>
-                      </tr>
-                      <tr>
-                        <td>Flower - 10lbs. or more</td>
-                        <td>$600</td>
-                      </tr>
-                      <tr>
-                        <td>Flower - 20lbs. or more</td>
-                        <td>$500</td>
-                      </tr>
-                      <tr>
-                        <td>50/50 Regular Buds/Popcorn</td>
-                        <td>$450</td>
-                      </tr>
-                      <tr>
-                        <td>Popcorn</td>
-                        <td>$300</td>
-                      </tr>
-                      <tr>
-                        <td>Shake</td>
-                        <td>$200</td>
-                      </tr>
-                      <tr>
-                        <td>Trim</td>
-                        <td>$100</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              
-              <!-- Pre-Roll Prices Table -->
-              <div class="table-container">
-                <h2>Pre-Roll Prices</h2>
-                <div class="table-wrapper">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Item</th>
-                        <th>Price</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Single Pre-Roll (1g)</td>
-                        <td>$2 / pre-roll<br /><small>($1.50 bulk)</small></td>
-                      </tr>
-                      <tr>
-                        <td>Kiefy Cones (1g)</td>
-                        <td>$4 / pre-roll</td>
-                      </tr>
-                      <tr>
-                        <td>25 Pack (0.5g)</td>
-                        <td>$25 / pack<br /><small>($19 bulk)</small></td>
-                      </tr>
-                      <tr>
-                        <td>2 Pack (1g)</td>
-                        <td>$3.90 / pack<br /><small>($2.90 bulk)</small></td>
-                      </tr>
-                      <tr>
-                        <td>10 Pack (1g)</td>
-                        <td>$18.50 / pack<br /><small>($13.50 bulk)</small></td>
-                      </tr>
-                      <tr>
-                        <td>20 Pack (1g)</td>
-                        <td>$36 / pack<br /><small>($26 bulk)</small></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          <!-- Flower Strains Section -->
-          <section>
-            <h2>Flower Strains</h2>
-            <div class="strain-container">
-              <!-- Sativa Column -->
-              <div class="strain-column">
-                <h3>Sativa</h3>
-                <ul>
-                  <li>Blueberry Pound Cake – 34.0%</li>
-                  <li>Chemlato – 23.9%</li>
-                  <li>Forbidden Jack – 17.7-19.8%</li>
-                  <li>Galactic Glue – 21.5%</li>
-                  <li>Limonade – 18.8-27.1%</li>
-                  <li>Papaya Gushers – 22.5%</li>
-                  <li>Sour Nerdz – 22.1-23.9%</li>
-                  <li>Walter White Widow – 19.3-21.8%</li>
-                </ul>
-              </div>
-              <!-- Hybrid Column -->
-              <div class="strain-column">
-                <h3>Hybrid</h3>
-                <ul>
-                  <li>Dark Web – 21.4-22.4%</li>
-                  <li>Gary Payton – 20.4%</li>
-                  <li>Grape Gas – 20.0-21.4%</li>
-                  <li>Horchata – 22.1%</li>
-                  <li>Lemon Cherry Trufflez – 22.7-24.5%</li>
-                  <li>Moon Mintz – 23.5%</li>
-                  <li>Peach Cobbler – 22.1%</li>
-                  <li>Super Runtz – 22.1-24.3%</li>
-                  <li>Tropicana Kush – 18.1-19.8%</li>
-                  <li>Zoap – 33.1%</li>
-                </ul>
-              </div>
-              <!-- Indica Column -->
-              <div class="strain-column">
-                <h3>Indica</h3>
-                <ul>
-                  <li>Chile Verde – 21.0-24.6%</li>
-                  <li>Cosmic Cookies – 19.9-24.1%</li>
-                  <li>Mule Fuel – 20.4-23.8%</li>
-                  <li>Pistachio Gelato – 23.8-24.3%</li>
-                  <li>Sandia OG – 20.7-21.7%</li>
-                  <li>Snozzberries – 20.7-27.7%</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          
-          <!-- Mr. Melty Section -->
-          <section>
-            <h2>Mr. Melty</h2>
-            <div style="text-align: center; margin-bottom: 20px;">
-              <img src="https://via.placeholder.com/200x100?text=Mr.+Melty+Logo" alt="Mr. Melty Logo" />
-            </div>
-            <div class="row">
-              <div>
-                <h3>Pre-Rolls</h3>
-                <p><strong>Mr. Melty 1g Premium Pre-Rolls</strong></p>
-                <p>Price: $2.50 per pre-roll<br /><small>($2 bulk)</small></p>
-                <p>Also available: 4-Pack Pre-Roll Tins at $10 per pack</p>
-              </div>
-              <div>
-                <h3>Flower Jars</h3>
-                <p><strong>3.5g Flower Jars</strong></p>
-                <p>Price: $10</p>
-              </div>
-            </div>
-            <h3>Mr. Melty Strains</h3>
-            <div class="strain-container">
-              <div class="strain-column">
-                <ul>
-                  <li>Gelonade – Sativa – 26.8%</li>
-                  <li>Lemonati – Sativa – 25.8%</li>
-                </ul>
-              </div>
-              <div class="strain-column">
-                <ul>
-                  <li>Puro Loco – Hybrid – 23.5%</li>
-                  <li>Sunset Sherbert – Indica – 23%</li>
-                </ul>
-              </div>
-              <div class="strain-column">
-                <ul>
-                  <li>Zkittlez – Indica – 26.6%</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <div class="inner">
-          <section>
-            <h2>Get in Touch</h2>
-            <form method="post" action="#">
-              <div class="fields">
-                <div class="field half">
-                  <input type="text" name="name" id="name" placeholder="Name" />
-                </div>
-                <div class="field half">
-                  <input type="email" name="email" id="email" placeholder="Email" />
-                </div>
-                <div class="field">
-                  <textarea name="message" id="message" placeholder="Message"></textarea>
-                </div>
-              </div>
-              <div class="actions" style="text-align:center;">
-                <input type="submit" value="Send" class="primary" />
-              </div>
-            </form>
-          </section>
-          <section>
-            <h2>Follow</h2>
-            <ul class="icons">
-              <li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-              <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-              <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-              <li><a href="#" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
-            </ul>
-          </section>
-          <ul class="copyright">
-            <li>&copy; Your Company. All rights reserved.</li>
-          </ul>
-        </div>
-      </footer>
     </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+</body>
 </html>
